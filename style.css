@@ -1,7 +1,7 @@
 *{
     margin: 0; 
     padding: 0; 
-    font-family: serif; 
+    font-family: serif;  
 /*    background: black; */
 }
 /*Design features for div I made in html*/
@@ -38,13 +38,13 @@ nav{
     z-index: 1; 
 }
 
-/*Front page - logo dimensions*/
+/*Front page - headshot/logo dimensions*/
 .logo{
     flex-basis: 20%; 
-    text-align: center; 
+    text-align:left; 
     position: absolute; 
     bottom: -500px; 
-    right: 450px; 
+/*    right: 450px; */
 }
 
 .logo img{
@@ -78,7 +78,7 @@ nav{
     word-spacing: inherit; 
 }
 
-/*Front page - name dimensions*/
+/*Front page - name (top left) dimensions*/
 .name{
     color: white; 
     text-align: center; 
@@ -99,11 +99,20 @@ nav{
 
 /*Front page - bio dimensions*/
 .bio{
-    text-align: center; 
-    font-size: 16; 
+    text-align: right; 
+    font-size: 50; 
+/*    position: sticky; */
     position: absolute; 
-    bottom: -600px; 
-/*    right: 950px; */
+    left: 620px; 
+    bottom: 480px; 
+}
+
+.bio2{
+    text-align: right; 
+    font-size: 20; 
+    position: absolute; 
+    bottom: 430px; 
+    left: 625px; 
 }
 
 .about-me-description{
@@ -155,4 +164,32 @@ ul li:hover ul.dropdown{
     padding: 1px; 
 }
 
+.resume_button{
+    background-color: gray; 
+    color: white; 
+    position: absolute; 
+    top: 16px; 
+    left: 490px;
+/*    border: 2px solid white;*/
+/*    padding: 10px 24px;*/
+    transition-duration: 0.4s;
+}
+.resume_button:hover{
+  background-color: black; 
+  color: black;
+}
+
+.resume_button:active{
+  background-color: black; 
+  color: black;
+}
+
+.resume_button button{
+    font-size: 18px; 
+    font-family: serif; 
+}
+
+.contact{
+     background-color:gray; color:black; font-size:23px; font-family: serif; position: absolute; bottom: 350px; left: 625px; border: 8x solid black; border-radius: 8px; padding: 8px 18px; display: inline-block;
+}
 
