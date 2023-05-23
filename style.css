@@ -102,7 +102,7 @@ nav{
     text-align: right; 
     font-size: 50; 
 /*    position: sticky; */
-    position: absolute; 
+    position: fixed; 
     left: 620px; 
     bottom: 480px; 
 }
@@ -110,7 +110,7 @@ nav{
 .bio2{
     text-align: right; 
     font-size: 20; 
-    position: absolute; 
+    position: fixed; 
     bottom: 430px; 
     left: 625px; 
 }
@@ -190,6 +190,6 @@ ul li:hover ul.dropdown{
 }
 
 .contact{
-     background-color:gray; color:black; font-size:23px; font-family: serif; position: absolute; bottom: 350px; left: 625px; border: 8x solid black; border-radius: 8px; padding: 8px 18px; display: inline-block;
+     background-color:gray; color:black; font-size:23px; font-family: serif; position: fixed; bottom: 350px; left: 625px; border: 8x solid black; border-radius: 8px; padding: 8px 18px; display: inline-block;
 }
 
