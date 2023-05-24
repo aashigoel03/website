@@ -155,10 +155,11 @@ nav{
 ul {
 list-style: none;
 background: black;
+text-align: center; 
 }
 
 ul li {
-display: inline-block;
+display: block;
 position: relative;
 }
 
@@ -173,10 +174,12 @@ text-align: center;
 
 ul li ul.dropdown li{
     display:block; 
+    background: lightgrey; 
+    margin: 2px 0px; 
 }
 
 ul li ul.dropdown {
-    width: 100%; 
+    width: auto; 
     background: grey; 
     position: absolute; 
     z-index: 999; 
@@ -201,7 +204,7 @@ ul li:hover ul.dropdown{
     font-size: 18px; 
     position: absolute; 
     top: 7px; 
-    left: 485px;
+    left: 515px;
     border: 2px solid black;
     padding: 10px 24px;
 /*    border: 8x solid black; border-radius: 8px; padding: 8px 18px; display: inline-block;*/
