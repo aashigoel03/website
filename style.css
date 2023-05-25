@@ -14,11 +14,12 @@
 }
 
 .work{
-    width:  100%; 
-    height: 90vh; 
+    width: 90%; 
+    height: 200vh; 
     position: relative; 
     overflow: hidden; 
     background-color: white; 
+    margin: 25px; 
 }
 
 .about-me{
@@ -46,11 +47,12 @@
     background-color: black; 
 }
 
-/*Front page*/
+/*Front page - not sure if nav is working without a period first.*/
 nav{
     width: 85%;
     height: auto; 
     position: sticky; 
+/*    overflow: hidden; */
     margin: 20px auto; 
     z-index: 1; 
 }
@@ -72,19 +74,31 @@ nav{
 
 .experience_images{
     flex-basis: 20%; 
-/*    text-align: left; */
     text-align: center; 
     display:flex; 
+    margin: 25px;
 }
 
 .experience_images img{
     width: 400px;
     height: auto; 
-/*    margin-top: 50px; */
+    margin-left:35px;
     display:flex; 
 }
 
-/*Fron page - nav link dimensions*/
+.work_images{
+    display:flex; 
+    text-align: center; 
+    margin-left: 20px; 
+}
+
+.work_images img{
+    width: 500px; 
+    height: auto;
+    display: flex; 
+}
+
+/*Front page - nav link dimensions*/
 .nav-links{
     flex: 1; 
     text-align: right; 
@@ -301,4 +315,13 @@ ul li:hover ul.dropdown{
 
 .experience_buttons_volunteer{
         background-color:dimgray; color:white; font-size:20px; font-family: serif;  border-radius: 8px; padding: 14px 28px; display: inline-block; border-color: white; margin: 10px; 
+}
+
+.margin-left{
+    margin: 25px; 
+}
+
+h3 {
+/*    color: dimgray; */
+    color:gray; 
 }
