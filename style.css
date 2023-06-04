@@ -15,7 +15,7 @@
 
 .work{
     width: 90%; 
-    height: 200vh; 
+    /*height: 300vh; increase if we wanna make length of page longer*/
     position: relative; 
     overflow: hidden; 
     background-color: whitesmoke; 
@@ -108,7 +108,7 @@ nav{
 }
 
 .work_images img{
-    width: 400px;
+    width: 300px;
     height: auto; 
     display:flex; 
     margin-left: 35px;
