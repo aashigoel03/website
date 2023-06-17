@@ -14,7 +14,9 @@
 }
 
 .work{
-    width: 90%; 
+/*    width: 90%; */
+    margin-left: 50px; 
+    margin-right: 50px; 
     /*height: 300vh; increase if we wanna make length of page longer*/
     position: relative; 
     overflow: hidden; 
@@ -76,7 +78,10 @@ nav{
     flex-basis: 20%; 
     text-align: center; 
     display:flex; 
-    margin: 25px;
+/*    margin: 25px;*/
+    margin-left: 70px; 
+    margin-right: 70px; 
+    margin-bottom: 10px; 
 /*    width: 0%; */
 /*    bottom: 20px; */
 /*    box-shadow: 0 3px 10px #8b8eaf; */
@@ -89,8 +94,12 @@ nav{
     width: 400px;
     height: auto; 
     display:flex; 
+    margin-left: 20px;
+    margin-right: 20px;
+/*
     margin-left: 35px;
     margin-right: 35px; 
+*/
     margin-top: 20px; 
     margin-bottom: 10px; 
     background-color: whitesmoke;
@@ -424,4 +433,9 @@ h4 {
 
 .background{
     background-color: whitesmoke; 
+}
+
+
+.about-me-description p {
+    font-size: 20px; 
 }
