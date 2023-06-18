@@ -439,3 +439,24 @@ h4 {
 .about-me-description p {
     font-size: 20px; 
 }
+
+
+/*Contact Me*/
+.input-field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.contact-form{
+    margin: 15px; 
+}
+
+.submit-button{
+    background-color:dimgray; color:white; font-size:16px; 	font-family: Cambria,Georgia,serif;  border-radius: 8px; padding: 7px 14px; display: inline-block; border-color: white; margin: 3px;
+}
