@@ -62,18 +62,37 @@
                     <h2>Escape Room Challenge, WPI</h2>
                     <h3>March 2023 - May 2023</h3>
                     <br>                
-                    <p>RBE 2002</p>
-                    <p>description</p>
+                    <p>Working in a team of 3, we used VSCode and programmed in C++ to create speed control algorithms that let three Polulu Romi robots autonomously navigate a maze using sensor-based control to find the escape room and escape. We used event-driven programming by using state machines in combination with having the robots communicate with each other via MQTT broker. Specifically, state transitions within the program are triggered by specific MQTT messages used as events. 
+                    </p>
+                    
                     <br>
-                    <h5>Relevant skills: C++, electrical stuff ---</h5>
+                    <p>For the challenge, our mapper robot (“A”) maps all the walls of the game board, the red beacon, the ramp, and the April tag location on a map visualizer. The location of the beacon is stored as the 3-digit code to be flashed later to open the escape room. The ramp robot (“B”) uses the map created by “A” and path finder and path follower functions to find the ramp and follow it. At the top of the ramp, it stops and uses MQTT to trigger “A”  to use the map and path finder and path follower functions to go to the red beacon and press the lever on it. After it presses the lever, an April tag is revealed in front of “B”, which contains the location of the escape room. “B” scans it and sends the escape room coordinates to the escape robot (“C”). “C” uses the path finder and path follower functions to navigate to the escape room, where it flashes the code that was stored during mapping as the location of the beacon. Once the door opens, “C” escapes. Upon escaping, it uses MQTT to trigger “B” to use the path finder and path follower functions to find the escape room and escape. And lastly, once “B” escapes, it sends a signal to “A” to do the same. 
+                    </p>
+                    
                     <br>
-                    <p><i>Attached is a video of our final project & state transition diagrams and wiring schematics for all 3 robots.</i></p>
+                    <p>
+                        “A” is started via text message using an iMessage API, “B” is started via an MQTT message from “A”, and “C” is started via Amazon Echo Dot using the same API as the iMessage. All 3 robots start at coordinate (0,0) on the board facing north. Sensors we used include ultrasonic rangefinders, sharp IR position finders, Open MV cameras, IR positioning camera, IMU, line follower sensors, IR receivers, and more. 
+                    </p>
+                    
+                    <br>
+                    <p>
+                        The logic behind this project uses a complicated mapping algorithm created in Python. The mapping state machine maps all the walls of the game board and detects the red beacon and both ends of the ramp and the April tag location (it later updates this empty box with the April tag after it is scanned). It sends constant updates to the visualizer with these walls and landmarks at each intersection. The path finder function creates a path for a robot to follow by returning a set of directions for the quickest path that will lead the robot from its starting coordinates and direction to its ending coordinates and direction. The path follower function follows the path by moving one intersection in the direction provided by the path finder function. For example, if the direction is north, the robot moves by (0,1) on the game board. The location of the beacon (i, j, header) is the 3 digit IR code that is flashed at the escape door to open the door, where i is the x-coordinate of its location on the board, j is the y-coordinate, and header is the direction that the beacon faces. A header of north corresponds to 0, east corresponds to 1, south corresponds to 2, and west corresponds to 3. The April tag contains data on the location of the escape room as its tags range from 0-25. The tens digit represents the i coordinate and the ones digit represents the j coordinate. The orientation of the tag determines which wall of the escape room has the door on it. <b>A diagram of the game board is shown below to help with visualization.</b>
+                    </p>
+                    
+                    <br>
+                    <h5>Relevant skills & concepts: C++, Embedded Programming, Solidworks, 3-D Printing, GitHub, Sensor Fusion, Odometry, Electrical Circuitry, PID controllers, etc.  ---</h5>
+                    <br>
+                    <p><i>Attached is a video of our final project, a diagram of the game board, & wiring schematics for the 3 robots.</i></p>
                     <br>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/mdD88BO-A-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <br>
+
+                  <p><img src="images/rbe2002_gameboard.png" width="400" height="auto">
+
+<!--                    <br>-->
 <!--                    <a href="states.pdf">example</a>-->
-                    <object data="RBE 2002 Wiring Schematics.pdf" type="application/pdf" width="780px" height="450"></object>
-                    <object data="states.pdf" type="application/pdf" width="780px" height="450"></object>
+                    <object data="RBE 2002 Wiring Schematics.pdf" type="application/pdf" width="670px" height="450"></object>
+<!--                    <object data="states.pdf" type="application/pdf" width="670px" height="450"></object>-->
+                    
                 </div>
                     <br>
                     <br>
@@ -89,9 +108,9 @@
                     &nbsp; 
                     <h5>Relevant skills: --</h5> 
                     <br> 
-                    <p><i>Attached are the final presentation slides, a video of our final project, a video of the romi alignment for one robot in Solidworks, & a video of one robot's exploded assembly in Solidworks.</i></p>
+                    <p><i>Attached are a video of our final project, a video of the romi alignment for one robot in Solidworks, & a video of one robot's exploded assembly in Solidworks.</i></p>
                     <br>
-                    <iframe src="https://wpi0-my.sharepoint.com/personal/agoel_wpi_edu/_layouts/15/Doc.aspx?sourcedoc={14780f25-b56a-4025-9ddb-a01e41696fb7}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="560px" height="315px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<!--                    <iframe src="https://wpi0-my.sharepoint.com/personal/agoel_wpi_edu/_layouts/15/Doc.aspx?sourcedoc={14780f25-b56a-4025-9ddb-a01e41696fb7}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="560px" height="315px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>-->
                     
                     [insert final project vid]
                     
@@ -127,13 +146,13 @@
                     &nbsp;
                     <h5>Relevant skills: --</h5>
                     <br>
-                    <p><i>Attached are 2 videos showing the autonomous and driver control portions of the project & the final project report.</i></p>
+                    <p><i>Attached are 2 videos showing the autonomous and driver control portions of the project.</i></p>
                     <br>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZVWjmuVcI4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
                     
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/LjB13YSVBng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     
-                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vR8Hb5xFvLOVcJ1WL3c9uJ4lJiMwhRXG62KNSJcADY1pAqa8ZrwtHvE6MeGtJXA7tpPFyQT0W28zUC1/pub?embedded=true" width="750" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!--                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vR8Hb5xFvLOVcJ1WL3c9uJ4lJiMwhRXG62KNSJcADY1pAqa8ZrwtHvE6MeGtJXA7tpPFyQT0W28zUC1/pub?embedded=true" width="750" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>-->
                     <br>
                     
                 </div>
