@@ -71,21 +71,23 @@
                     
                     <br>
                     <p>
-                        “A” is started via text message using an iMessage API, “B” is started via an MQTT message from “A”, and “C” is started via Amazon Echo Dot using the same API as the iMessage. All 3 robots start at coordinate (0,0) on the board facing north. Sensors we used include ultrasonic rangefinders, sharp IR position finders, Open MV cameras, IR positioning camera, IMU, line follower sensors, IR receivers, and more. 
+                    “A” is started via text message using an iMessage API, “B” is started via an MQTT message from “A”, and “C” is started via Amazon Echo Dot using the same API as the iMessage. All 3 robots start at coordinate (0,0) on the board facing north. Sensors we used include ultrasonic rangefinders, sharp IR position finders, Open MV cameras, IR positioning camera, IMU, reflectance sensors, IR receivers, quadrature encoders, and more. 
                     </p>
                     
                     <br>
                     <p>
-                        The logic behind this project uses a complicated mapping algorithm created in Python. The mapping state machine maps all the walls of the game board and detects the red beacon and both ends of the ramp and the April tag location (it later updates this empty box with the April tag after it is scanned). It sends constant updates to the visualizer with these walls and landmarks at each intersection. The path finder function creates a path for a robot to follow by returning a set of directions for the quickest path that will lead the robot from its starting coordinates and direction to its ending coordinates and direction. The path follower function follows the path by moving one intersection in the direction provided by the path finder function. For example, if the direction is north, the robot moves by (0,1) on the game board. The location of the beacon (i, j, header) is the 3 digit IR code that is flashed at the escape door to open the door, where i is the x-coordinate of its location on the board, j is the y-coordinate, and header is the direction that the beacon faces. A header of north corresponds to 0, east corresponds to 1, south corresponds to 2, and west corresponds to 3. The April tag contains data on the location of the escape room as its tags range from 0-25. The tens digit represents the i coordinate and the ones digit represents the j coordinate. The orientation of the tag determines which wall of the escape room has the door on it. <b>A diagram of the game board is shown below to help with visualization.</b>
+                    The logic behind this project uses a complicated mapping algorithm created in Python. The mapping state machine maps all the walls of the game board and detects the red beacon and both ends of the ramp and the April tag location (it later updates this empty box with the April tag after it is scanned). It sends constant updates to the visualizer with these walls and landmarks at each intersection. The path finder function creates a path for a robot to follow by returning a set of directions for the quickest path that will lead the robot from its starting coordinates and direction to its ending coordinates and direction. The path follower function follows the path by moving one intersection in the direction provided by the path finder function. For example, if the direction is north, the robot moves by (0,1) on the game board. The location of the beacon (i, j, header) is the 3 digit IR code that is flashed at the escape door to open the door, where i is the x-coordinate of its location on the board, j is the y-coordinate, and header is the direction that the beacon faces. A header of north corresponds to 0, east corresponds to 1, south corresponds to 2, and west corresponds to 3. The April tag contains data on the location of the escape room as its tags range from 0-25. The tens digit represents the i coordinate and the ones digit represents the j coordinate. The orientation of the tag determines which wall of the escape room has the door on it. <b>A diagram of the game board is shown below for visualization.</b>
                     </p>
                     
                     <br>
-                    <h5>Relevant skills & concepts: C++, Embedded Programming, Solidworks, 3-D Printing, GitHub, Sensor Fusion, Odometry, Electrical Circuitry, PID controllers, etc.  ---</h5>
+                    <h5>Relevant skills & concepts: C++, VSCode, Embedded Programming, Solidworks, 3-D Printing, GitHub, Sensor Fusion, Odometry, Electrical Circuitry, PID controllers, etc.  ---</h5>
                     <br>
                     <p><i>Attached is a video of our final project, a diagram of the game board, & wiring schematics for the 3 robots.</i></p>
                     <br>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/mdD88BO-A-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tWGlltvk8_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    
+                    
                   <p><img src="images/rbe2002_gameboard.png" width="400" height="auto">
 
 <!--                    <br>-->
@@ -103,10 +105,13 @@
                     <h2>Solar Panel Replacement Challenge, WPI </h2>
                     <h3>August 2022 - October 2022</h3>
                     <br>
-                    <p>RBE 2001</p>
-                    <p>description</p>
+                    <p>Working in a team of 4, we used VS Code and programmed in C++ to create two robots that could autonomously remove old “solar panels” (thin 3-D printed squares) from a “roof”, place them on a staging block, pick up new panels, and place the new panels back on the roof.  After the first robot completes the challenge on one side of the field, it moves to the other side until it is paused via IR remote. It is then replaced by the other robot, which completes the same tasks on the other side. Each robot completes the challenge on a roof with a different angle, and they are both started and stopped via IR remote. </p>
+                    <br>
+                    <p>
+                    We created two robots, one with a 2-stage transmission and one with a 3-stage transmission, each with different fourbar designs and different grippers (one had a regular servo-actuated gripper and other had a continuous rotation servo-actuated gripper). The gears were laser cut, while the grippers were 3D printed. Before being physically created, the designs for both robots were tested in Solidworks to ensure they were feasible for the challenges, as one can be seen in the Romi Alignment video. The extra credit video was an exploded view of one of our robots in Solidworks to show how it was put together. Sensors used include reflectance sensors, ultrasonic rangefinders, IR receivers, quadrature encoders, and potentiometers. 
+                    </p>
                     &nbsp; 
-                    <h5>Relevant skills: --</h5> 
+                    <h5>Relevant skills & concepts: C++, VSCode, Solidworks, 3D Printing, Laser Cutting, MathCAD, Speed Ratio Analysis, Velocity Analysis, Force Analysis, Linkage Synthesis </h5> 
                     <br> 
                     <p><i>Attached are a video of our final project, a video of the romi alignment for one robot in Solidworks, & a video of one robot's exploded assembly in Solidworks.</i></p>
                     <br>
@@ -141,10 +146,10 @@
                     <h2>Pizza Delivery Challenge, WPI</h2>
                     <h3>March 2022 - May 2022</h3>
                     <br>
-                    <p>RBE 1001</p>
-                    <p>description</p>
+                    <p>Working in a team of 4, we used VEXcode Pro V5 and programmed in C++ to create a robot that autonomously moved up a ramp, climbed over a bump, and delivered a “pizza” (square wooden block) to a “floor” of a “building,” with each floor being worth a different number of points. After 45 seconds, we switched to the driver control aspect of the project which lasted 90 seconds. We remote-controlled the robot to push a wooden structure onto another section of the board for points, move over a bump, and pick up pizzas from ground (dropped on the game board through a slot) and individually deliver them to different floors of the building until time ran out. Sensors used include reflectance sensors, a vision camera, and ultrasonic rangefinders. 
+                    </p>
                     &nbsp;
-                    <h5>Relevant skills: --</h5>
+                    <h5>Relevant skills & concepts: C++, VEXcode Pro V5, PD controller, etc. --</h5>
                     <br>
                     <p><i>Attached are 2 videos showing the autonomous and driver control portions of the project.</i></p>
                     <br>

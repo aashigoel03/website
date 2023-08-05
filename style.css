@@ -61,18 +61,19 @@ nav{
 
 /*Front page - headshot/logo dimensions*/
 .logo{
-    flex-basis: 20%; 
+    flex-basis: 100%; 
     text-align:left; 
     position: absolute; 
-    margin: 120px; 
+    margin: 50px; 
+    margin-top: 120px; 
 /*    bottom: -500px; */
 /*    right: 450px; */
 }
 
 .logo img{
-    width: 400px;
+    width: 550px;
     height: 100%; 
-    border-radius: 50%; /* circular image */ 
+/*    border-radius: 50%;  circular image  */
     
 }
 
